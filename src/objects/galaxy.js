@@ -32,7 +32,7 @@ export class Galaxy {
     rotateStars() {
         if (this.config.generationMode === 'noise' && this.config.uniqueOrbits) {
             this.stars.forEach((star, index) => {
-                star.axis = star.calculateIndividualAxis();
+                star.orbitalAxis = star.calculateIndividualAxis();
                 star.updateRotation();
             });
         } else {
